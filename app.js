@@ -10,7 +10,6 @@ const app = express()
 const port = process.env.PORT;
 
 
-// Proxy configuration for API routes
 app.use('/apiusersfeihub/users', usersProxy);
 app.use('/apiusersfeihub/credentials', credentialsProxy);
 app.use('/apiusersfeihub/follows', followersProxy);
@@ -18,7 +17,6 @@ app.use('/apiusersfeihub/follows', followersProxy);
 app.use('/apipostsfeihub/posts', [validateJWT], postsProxy);
 app.use('/apipostsfeihub/chats', [validateJWT], chatsProxy);
 
-// Start the server
 app.listen(port, () => {
   console.log(`API Gateway running on port ${port}`);
 });
