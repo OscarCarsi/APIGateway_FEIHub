@@ -6,6 +6,7 @@ router.put('/editPost', postsProxy);
 router.delete('/deletePost/:id', postsProxy);
 router.get('/postsAuthor/:author', postsProxy);
 router.post('/postIdTitle', postsProxy);
+router.get('/postsTarget/:target', postsProxy)
 router.post('/principalPosts', postsProxy);
 router.post('/principalPostsTarget', postsProxy);
 router.post('/addComment', postsProxy);
